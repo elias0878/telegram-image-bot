@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-image-bot
+    repo: https://github.com/elias0878/telegram-image-bot
+    dockerfilePath: Dockerfile
+    dockerCommand: python server.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7824666064:AAHbJ51UhVOrP_InSqF5CE2eMj2l1VqRSpQ
+      - key: DATABASE_PATH
+        value: images.db
+      - key: IMAGES_FOLDER
+        value: images
+      - key: PORT
+        value: 10000
+    plan: free
+    region: oregon
